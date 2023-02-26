@@ -2,7 +2,7 @@ var express = require('express');
 var cors = require('cors');
 var app = express();
 var GeoJSON = require('geojson');
-
+var Portt = process.env.PORT || 3000;
 app.use(cors());
 
 function getcustomerdata(req,res){
@@ -53,6 +53,6 @@ function getcustomerdata(req,res){
 
 app.get('/customer', getcustomerdata)
 
-var server = app.listen(9001, function () {
-    console.log('Server is running on port 9001..');
+var server = app.listen(Portt, function () {
+    console.log('Server is running on port 3000..');
 });
